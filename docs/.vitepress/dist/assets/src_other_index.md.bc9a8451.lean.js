@@ -1,1 +1,0 @@
-import{_ as s,o as a,c as n,U as l}from"./chunks/framework.5b95dd12.js";const A=JSON.parse('{"title":"JS - 开发技巧","description":"","frontmatter":{},"headers":[],"relativePath":"src/other/index.md","lastUpdated":null}'),p={name:"src/other/index.md"},o=l("",45),e=[o];function t(c,r,y,F,D,B){return a(),n("div",null,e)}const E=s(p,[["render",t]]);export{A as __pageData,E as default};

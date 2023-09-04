@@ -1,1 +1,0 @@
-import{_ as s,o as a,c as n,U as l}from"./chunks/framework.5b95dd12.js";const A=JSON.parse('{"title":"模式匹配","description":"","frontmatter":{},"headers":[],"relativePath":"src/types/模式匹配.md","lastUpdated":null}'),p={name:"src/types/模式匹配.md"},o=l("",79),e=[o];function t(r,c,B,y,F,D){return a(),n("div",null,e)}const E=s(p,[["render",t]]);export{A as __pageData,E as default};
