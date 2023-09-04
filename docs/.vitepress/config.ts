@@ -1,6 +1,6 @@
 import { defineConfig } from "vitepress";
 
-const BASE_PATH = "./";
+const BASE_PATH = "/docs/";
 
 export default defineConfig({
   title: "技术站 - ZLG",
