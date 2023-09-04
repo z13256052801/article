@@ -1,0 +1,17 @@
+{
+    "scripts": {
+        "docs:dev": "vitepress dev docs --host --port 8888",
+        "docs:build": "vitepress build docs",
+        "docs:serve": "vitepress serve docs"
+    },
+    "devDependencies": {
+        "flexsearch": "^0.7.31",
+        "sass": "^1.66.1",
+        "vitepress": "1.0.0-alpha.65",
+        "vitepress-plugin-search": "^1.0.4-alpha.20"
+    },
+    "type": "module",
+    "dependencies": {
+        "ranui": "^0.1.5"
+    }
+}

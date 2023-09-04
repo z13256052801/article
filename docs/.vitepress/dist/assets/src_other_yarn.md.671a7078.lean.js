@@ -1,0 +1,1 @@
+import{_ as s,o as n,c as a,U as l}from"./chunks/framework.5b95dd12.js";const C=JSON.parse('{"title":"yarn 的安装和使用","description":"","frontmatter":{},"headers":[],"relativePath":"src/other/yarn.md","lastUpdated":null}'),p={name:"src/other/yarn.md"},o=l("",15),e=[o];function t(c,r,y,i,B,E){return n(),a("div",null,e)}const F=s(p,[["render",t]]);export{C as __pageData,F as default};

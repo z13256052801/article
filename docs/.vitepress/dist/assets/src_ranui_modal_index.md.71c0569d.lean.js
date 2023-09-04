@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as a}from"./chunks/framework.5b95dd12.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"src/ranui/modal/index.md","lastUpdated":null}'),r={name:"src/ranui/modal/index.md"};function n(o,s,c,d,i,p){return t(),a("div")}const m=e(r,[["render",n]]);export{_ as __pageData,m as default};
