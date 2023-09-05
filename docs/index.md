@@ -13,7 +13,7 @@ hero:
   actions:
     - theme: brand
       text: 开始
-      link:
+      link: src/common_tools/method/
     - theme: alt
       text: 关于我
       link:
