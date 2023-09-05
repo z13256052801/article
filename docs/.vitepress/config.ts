@@ -1,11 +1,11 @@
 import { defineConfig } from "vitepress";
 
-const BASE_PATH = "/docs/";
+// const BASE_PATH = "/docs/";
 
 export default defineConfig({
-  title: "技术站 - ZLG",
+  title: "技术库 - ZLG",
   description: "ZhangLigang",
-  base: BASE_PATH,
+  //   base: BASE_PATH,
   lastUpdated: true,
   locales: {
     root: { label: "简体中文", lang: "zh-CN" },
@@ -20,7 +20,7 @@ export default defineConfig({
     },
   },
   head: [
-    ["link", { rel: "icon", href: `${BASE_PATH}favicon.ico` }],
+    // ["link", { rel: "icon", href: `${BASE_PATH}favicon.ico` }],
     ["meta", { property: "og:type", content: "website" }],
     ["meta", { name: "theme-color", content: "#646cff" }],
     [

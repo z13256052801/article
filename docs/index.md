@@ -1,7 +1,7 @@
 ---
 layout: home
 
-title: 技术站 - ZLG
+title: 技术库 - ZLG
 
 hero:
   name: Tech Blog
@@ -13,7 +13,7 @@ hero:
   actions:
     - theme: brand
       text: 开始
-      link: /src/ranuts/utils/
+      link:
     - theme: alt
       text: 关于我
       link:
