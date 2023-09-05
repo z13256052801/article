@@ -49,33 +49,33 @@ p img {
   }
 }
 
-@media (min-width: 960px) {
-  .VPNavBar.has-sidebar .curtain::before {
-    content: none !important;
-  }
+// @media (min-width: 960px) {
+//   .VPNavBar.has-sidebar .curtain::before {
+//     content: none !important;
+//   }
 
-  .VPNavBar.has-sidebar .content-body,
-  .VPNavBar.fill .content-body {
-    backdrop-filter: blur(5px);
-    background: rgba(255, 255, 255, 0.8) !important;
-  }
-  .dark {
-    .VPNavBar.has-sidebar .content-body,
-    .VPNavBar.fill .content-body {
-      backdrop-filter: blur(5px);
-      background: rgba(36, 36, 36, 0.8) !important;
-    }
-  }
-}
+//     .VPNavBar.has-sidebar .content-body,
+//     .VPNavBar.fill .content-body {
+//       backdrop-filter: blur(5px);
+//       background: rgba(255, 255, 255, 0.8) !important;
+//     }
+//     .dark {
+//       .VPNavBar.has-sidebar .content-body,
+//       .VPNavBar.fill .content-body {
+//         backdrop-filter: blur(5px);
+//         background: rgba(36, 36, 36, 0.8) !important;
+//       }
+//     }
+// }
 
-@media (min-width: 1440px) {
-  .VPSidebar {
-    width: calc(
-      (100% - (var(--vp-layout-max-width) - 64px)) / 2 + var(--vp-sidebar-width) -
-        25px
-    ) !important;
-  }
-}
+// @media (min-width: 1440px) {
+//   .VPSidebar {
+//     width: calc(
+//       (100% - (var(--vp-layout-max-width) - 64px)) / 2 + var(--vp-sidebar-width) -
+//         25px
+//     ) !important;
+//   }
+// }
 
 // ::-webkit-scrollbar {
 //   display: none;

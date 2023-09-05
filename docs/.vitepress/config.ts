@@ -43,8 +43,9 @@ export default defineConfig({
     logo: "/home.svg",
     nav: [
       { text: "首页", link: "/" },
-      { text: "函数", link: "/src/common_tools/method/" },
-      { text: "其它", link: "/src/other/" },
+      { text: "Vue", link: "/src/vue/vue3" },
+      { text: "函数", link: "/src/common_tools/method/getUrlParam" },
+      { text: "其它", link: "/src/other/js" },
       //   { text: "组件", link: "/src/ranui/" },
       //   { text: "璀璨", link: "/src/article/designMode.md" },
     ],
@@ -64,7 +65,10 @@ export default defineConfig({
         {
           text: "通用函数",
           items: [
-            { text: "截取 url 参数", link: "/src/common_tools/method/" },
+            {
+              text: "截取 url 参数",
+              link: "/src/common_tools/method/getUrlParam",
+            },
             {
               text: "封装 Promise.allSettled()",
               link: "/src/common_tools/method/allSettled",
@@ -76,12 +80,15 @@ export default defineConfig({
             },
           ],
         },
-        {
-          text: "文件操作",
-          items: [
-            { text: "监听文件是否改变", link: "/src/common_tools/file/" },
-          ],
-        },
+        // {
+        //   text: "文件操作",
+        //   items: [
+        //     {
+        //       text: "监听文件是否改变",
+        //       link: "/src/common_tools/method/file/",
+        //     },
+        //   ],
+        // },
         {
           text: "排序算法",
           items: [
@@ -103,7 +110,7 @@ export default defineConfig({
         {
           text: "开发技巧",
           items: [
-            { text: "JS", link: "/src/other/" },
+            { text: "JS", link: "/src/other/js" },
             { text: "CSS", link: "/src/other/css" },
             { text: "yarn的安装和使用", link: "/src/other/yarn" },
           ],
