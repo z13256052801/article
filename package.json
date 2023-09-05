@@ -8,11 +8,11 @@
     "devDependencies": {
         "flexsearch": "^0.7.31",
         "sass": "^1.66.1",
-        "vitepress": "1.0.0-rc.10",
-        "vitepress-plugin-search": "^1.0.4-alpha.20"
+        "vitepress": "1.0.0-rc.10"
     },
     "type": "module",
     "dependencies": {
-        "ranui": "^0.1.5"
+        "ranui": "^0.1.5",
+        "vitepress-plugin-pagefind": "^0.2.6"
     }
 }

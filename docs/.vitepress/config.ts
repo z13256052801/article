@@ -1,4 +1,5 @@
 import { defineConfig } from "vitepress";
+import { pagefindPlugin } from "vitepress-plugin-pagefind";
 
 const BASE_PATH = "/article/";
 
@@ -18,6 +19,16 @@ export default defineConfig({
         },
       },
     },
+  },
+  vite: {
+    plugins: [
+      pagefindPlugin({
+        btnPlaceholder: "搜索",
+        placeholder: "搜索文档",
+        emptyText: "空空如也",
+        heading: "共: {{searchResult}} 条结果",
+      }),
+    ],
   },
   head: [
     ["link", { rel: "icon", href: `${BASE_PATH}favicon.ico` }],
