@@ -4,7 +4,7 @@ import { pagefindPlugin } from "vitepress-plugin-pagefind";
 const BASE_PATH = "/article/";
 
 export default defineConfig({
-  title: "ZLG技术库",
+  title: "ZLG知识库",
   description: "ZhangLigang",
   base: BASE_PATH,
   lastUpdated: true,

@@ -1,7 +1,7 @@
 ---
 layout: home
 
-title: ZLG技术库
+title: ZLG知识库
 
 hero:
   name: Tech Blog
