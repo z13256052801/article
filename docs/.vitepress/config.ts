@@ -43,7 +43,7 @@ export default defineConfig({
     logo: "/home.svg",
     nav: [
       { text: "首页", link: "/" },
-      { text: "Vue", link: "/src/vue/vue3" },
+      { text: "Vue", link: "/src/vue/vue2/index1" },
       { text: "函数", link: "/src/common_tools/method/getUrlParam" },
       { text: "其它", link: "/src/other/js" },
       //   { text: "组件", link: "/src/ranui/" },
@@ -60,6 +60,15 @@ export default defineConfig({
     //   indexName: "chaxus_ran", // 需要替换
     //   placeholder: "search",
     // },
+    outline: {
+      level: "deep", // 右侧大纲标题层级
+      label: "目录", // 右侧大纲标题文本配置
+    },
+    // 文档页脚文本配置
+    docFooter: {
+      prev: "上一篇",
+      next: "下一篇",
+    },
     sidebar: {
       "/src/common_tools/": [
         {
@@ -103,6 +112,23 @@ export default defineConfig({
             { text: "计数排序", link: "/src/common_tools/sort/count/" },
             { text: "桶排序", link: "/src/common_tools/sort/bucket/" },
             { text: "基数排序", link: "/src/common_tools/sort/radix/" },
+          ],
+        },
+      ],
+      "/src/vue/": [
+        {
+          text: "技术栈",
+          items: [
+            { text: "Vue2", link: "/src/vue/vue2/index1" },
+            // { text: "Vue3", link: "/src/vue/vue3/ref_reactive" },
+            {
+              text: "Vue3",
+              items: [
+                { text: "ref和reactive", link: "/src/vue/vue3/ref_reactive" },
+                { text: "Vue3组件通信", link: "/src/vue/vue3/communication" },
+              ],
+            },
+            { text: "Pinia", link: "/src/vue/pinia/pinia" },
           ],
         },
       ],

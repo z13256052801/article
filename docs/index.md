@@ -13,7 +13,7 @@ hero:
   actions:
     - theme: brand
       text: 开始
-      link: src/common_tools/method/
+      link: src/vue/vue3/ref_reactive
     - theme: alt
       text: 关于我
       link:
