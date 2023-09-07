@@ -128,7 +128,7 @@ export default defineConfig({
             {
               text: "Vue2",
               items: [
-                { text: "Vue2声明周期", link: "/src/vue/vue2/index1" },
+                { text: "Vue2生命周期", link: "/src/vue/vue2/index1" },
                 { text: "Vue2组件通信", link: "/src/vue/vue2/communication" },
               ],
             },
@@ -145,11 +145,15 @@ export default defineConfig({
       ],
       "/src/other/": [
         {
-          text: "开发技巧",
+          text: "森罗万象",
           items: [
-            { text: "JS", link: "/src/other/js" },
-            { text: "CSS", link: "/src/other/css" },
+            { text: "JS - 开发技巧", link: "/src/other/js" },
+            { text: "CSS - 开发技巧", link: "/src/other/css" },
             { text: "yarn的安装和使用", link: "/src/other/yarn" },
+            {
+              text: "TS中type与interface的区别",
+              link: "/src/other/type_and_interface",
+            },
           ],
         },
       ],
