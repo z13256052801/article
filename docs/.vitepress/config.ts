@@ -82,6 +82,10 @@ export default defineConfig({
               text: "封装 Promise.allSettled()",
               link: "/src/common_tools/method/allSettled",
             },
+            {
+              text: "封装列表(hooks) - usePaging()",
+              link: "/src/common_tools/method/usePaging",
+            },
             { text: "时间格式化", link: "/src/common_tools/method/timeFormat" },
             {
               text: "字符串大小写转换",
@@ -119,8 +123,15 @@ export default defineConfig({
         {
           text: "技术栈",
           items: [
-            { text: "Vue2", link: "/src/vue/vue2/index1" },
+            // { text: "Vue2", link: "/src/vue/vue2/index1" },
             // { text: "Vue3", link: "/src/vue/vue3/ref_reactive" },
+            {
+              text: "Vue2",
+              items: [
+                { text: "Vue2声明周期", link: "/src/vue/vue2/index1" },
+                { text: "Vue2组件通信", link: "/src/vue/vue2/communication" },
+              ],
+            },
             {
               text: "Vue3",
               items: [
