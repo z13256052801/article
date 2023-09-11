@@ -11,6 +11,10 @@ export default defineConfig({
   locales: {
     root: { label: "简体中文", lang: "zh-CN" },
   },
+  markdown: {
+    //代码块启用行号
+    lineNumbers: true,
+  },
   vue: {
     template: {
       compilerOptions: {
@@ -23,6 +27,14 @@ export default defineConfig({
   vite: {
     plugins: [
       pagefindPlugin({
+        // customSearchQuery: chineseSearchOptimize,
+        // customSearchQuery(input) {
+        //   // 将搜索的每个中文单字两侧加上空格
+        //   return input
+        //     .replace(/[\u4e00-\u9fa5]/g, " $& ")
+        //     .replace(/\s+/g, " ")
+        //     .trim();
+        // },
         btnPlaceholder: "搜索",
         placeholder: "搜索文档",
         emptyText: "空空如也",
@@ -140,6 +152,7 @@ export default defineConfig({
               ],
             },
             { text: "Pinia", link: "/src/vue/pinia/pinia" },
+            { text: "五湖四海", link: "/src/vue/all_corners/all_corners" },
           ],
         },
       ],
