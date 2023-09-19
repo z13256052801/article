@@ -52,7 +52,7 @@ export default defineConfig({
     ],
   ],
   themeConfig: {
-    logo: "/home.svg",
+    logo: "/orange.png",
     nav: [
       { text: "首页", link: "/" },
       { text: "Vue", link: "/src/vue/vue2/index1" },

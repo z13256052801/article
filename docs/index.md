@@ -8,7 +8,8 @@ hero:
   text: 风起于青萍之末
   tagline: 旅程总有一天会迎来终点，不必匆忙。
   image:
-    src: /home.svg
+    # src: /home.svg
+    src: /orange.png
     alt: logo
   actions:
     - theme: brand

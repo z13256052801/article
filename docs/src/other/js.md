@@ -319,3 +319,57 @@ function setRandom(min，max){
     }
 }
 ```
+
+## 21.单选、多选
+
+```vue
+<template>
+  <div
+    class="item"
+    v-for="(item, index) in list.open_time"
+    :key="index"
+    @click="selectBox(item)"
+    :class="{ 'item-active': selectIndexArr.includes(item.id) }"
+  >
+    {{ item.times }}
+  </div>
+</template>
+
+<script>
+data() {
+    return {
+        selectIndexArr: [],
+        isMultipleSelect: true,
+    }
+},
+methods: {
+    selectBox(id) {
+        if (this.isMultipleSelect) { //多选
+            if (this.selectIndexArr.includes(id)) {
+                this.selectIndexArr = this.selectIndexArr.filter(item => item !== id);
+            } else {
+                this.selectIndexArr.push(id);
+            }
+        } else { //单选
+            this.selectIndexArr = [];
+            this.selectIndexArr.push(id);
+        }
+        console.log(this.selectIndexArr)
+    }
+}
+</script>
+```
+
+## 22.计算数组里面的数字是否连续
+
+```js
+function isConsecutive(arr) {
+  arr.sort((a, b) => a - b); //排序
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] - arr[i - 1] !== 1) {
+      return false;
+    }
+  }
+  return true;
+}
+```
