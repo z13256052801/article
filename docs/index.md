@@ -9,7 +9,6 @@ hero:
   tagline: 旅程总有一天会迎来终点，不必匆忙。
   image:
     # src: /home.svg
-    src: /orange.png
     alt: logo
   actions:
     - theme: brand
