@@ -4,7 +4,7 @@ import { pagefindPlugin } from "vitepress-plugin-pagefind";
 const BASE_PATH = "/article/";
 
 export default defineConfig({
-  title: "ZLG知识库",
+  title: "Tech Blog",
   description: "ZhangLigang",
   base: BASE_PATH,
   lastUpdated: true,
@@ -57,7 +57,7 @@ export default defineConfig({
       { text: "首页", link: "/" },
       { text: "Vue", link: "/src/vue/vue2/index1" },
       { text: "函数", link: "/src/common_tools/method/getUrlParam" },
-      { text: "其它", link: "/src/other/js" },
+      { text: "森罗万象", link: "/src/other/js" },
       //   { text: "组件", link: "/src/ranui/" },
       //   { text: "璀璨", link: "/src/article/designMode.md" },
     ],
@@ -167,6 +167,7 @@ export default defineConfig({
               text: "TS中type与interface的区别",
               link: "/src/other/type_and_interface",
             },
+            { text: "其它", link: "/src/other/qita" },
           ],
         },
       ],
