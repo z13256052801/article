@@ -373,3 +373,60 @@ function isConsecutive(arr) {
   return true;
 }
 ```
+
+## 23.计算两个日期之间的间隔
+
+```js
+const diffInDays = (dateA, dateB) =>
+  Math.floor((dateB - dateA) / (1000 * 60 * 60 * 24));
+```
+
+## 24.查找日期位于一年中的第几天
+
+```js
+const dayOfYear = (date) =>
+  Math.floor((date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
+```
+
+## 25.检测对象是否为空
+
+```js
+const isEmptyObject = (obj) =>
+  Object.keys(obj).length === 0 && obj.constructor === Object;
+```
+
+## 26.判断数组是否包含某个值
+
+```js
+const hasValue = arr.includes(value);
+```
+
+## 27.检查数组中是否存在重复项
+
+```js
+const hasDuplicates = (array) => new Set(array).size !== array.length;
+```
+
+## 28.从数组中删除特定元素
+
+```js
+const removedArray = array.filter((item) => item !== elementToRemove);
+```
+
+## 29.数组扁平化
+
+```js
+const arr = [
+  [1, 2],
+  [3, 4],
+  [5, 6],
+];
+const flattenedArr = arr.reduce((acc, cur) => acc.concat(cur), []);
+console.log(flattenedArr); // [1, 2, 3, 4, 5, 6]
+```
+
+## 30.对象数组根据某个属性值进行排序
+
+```js
+const sortedArray = array.sort((a, b) => (a.property > b.property ? 1 : -1));
+```
