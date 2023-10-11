@@ -113,12 +113,11 @@ if (["abc", "def", "ghi", "jkl"].includes(x)) {
 ```js
 //Longhand
 if (test1) {
-	callMethod();
+  callMethod();
 }
 
 //Shorthand
-test1 && callMethod();//logic
-}
+test1 && callMethod(); //logic
 ```
 
 ## 9.switch 逻辑优化
