@@ -23,11 +23,6 @@ jobs:
 
             - name: Deploy
               uses: peaceiris/actions-gh-pages@v3
-              env:
-                  APPLICATION_ID: ${{ secrets.APPLICATION_ID }}
-                  API_KEY: ${{ secrets.API_KEY }}
-                  CONFIG: ${{ steps.algolia_config.outputs.config }}
-
               with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
                   publish_dir: docs/.vitepress/dist

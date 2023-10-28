@@ -64,12 +64,12 @@ export default defineConfig({
         //   message: "Released ZhangLigang the MIT License.",
         //   //   copyright: "Copyright © 2022-11-11",
         // },
-        algolia: {
-            appId: 'M7JGB28KE8', // 需要替换
-            apiKey: 'a24d9f06545724e2aea7feca3f3e0e53', // 需要替换
-            indexName: 'VitePress 搜索', // 需要替换
-            placeholder: '搜索',
-        },
+        // algolia: {
+        //     appId: 'M7JGB28KE8', // 需要替换
+        //     apiKey: 'a24d9f06545724e2aea7feca3f3e0e53', // 需要替换
+        //     indexName: 'VitePress 搜索', // 需要替换
+        //     placeholder: '搜索',
+        // },
         outline: {
             level: 'deep', // 右侧大纲标题层级
             label: '目录', // 右侧大纲标题文本配置
