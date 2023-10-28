@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-import { pagefindPlugin } from 'vitepress-plugin-pagefind'
+// import { pagefindPlugin, chineseSearchOptimize } from 'vitepress-plugin-pagefind'
 
 const BASE_PATH = '/article/'
 
@@ -24,24 +24,25 @@ export default defineConfig({
             },
         },
     },
-    vite: {
-        plugins: [
-            pagefindPlugin({
-                // customSearchQuery: chineseSearchOptimize,
-                // customSearchQuery(input) {
-                //   // 将搜索的每个中文单字两侧加上空格
-                //   return input
-                //     .replace(/[\u4e00-\u9fa5]/g, " $& ")
-                //     .replace(/\s+/g, " ")
-                //     .trim();
-                // },
-                btnPlaceholder: '搜索',
-                placeholder: '搜索文档',
-                emptyText: '空空如也',
-                heading: '共: {{searchResult}} 条结果',
-            }),
-        ],
-    },
+    // vite: {
+    //     plugins: [
+    //         pagefindPlugin({
+    //             forceLanguage: 'zh-cn',
+    //             customSearchQuery: chineseSearchOptimize,
+    //             // customSearchQuery(input) {
+    //             //   // 将搜索的每个中文单字两侧加上空格
+    //             //   return input
+    //             //     .replace(/[\u4e00-\u9fa5]/g, " $& ")
+    //             //     .replace(/\s+/g, " ")
+    //             //     .trim();
+    //             // },
+    //             btnPlaceholder: '搜索',
+    //             placeholder: '搜索文档',
+    //             emptyText: '空空如也',
+    //             heading: '共: {{searchResult}} 条结果',
+    //         }),
+    //     ],
+    // },
     head: [
         ['link', { rel: 'icon', href: `${BASE_PATH}favicon.ico` }],
         ['meta', { property: 'og:type', content: 'website' }],
@@ -56,7 +57,6 @@ export default defineConfig({
             { text: 'TypeScript', link: '/src/ts_collect/type_and_interface' },
             { text: '函数', link: '/src/common_tools/method/getUrlParam' },
             { text: '森罗万象', link: '/src/other/js' },
-            //   { text: "组件", link: "/src/ranui/" },
             //   { text: "璀璨", link: "/src/article/designMode.md" },
         ],
         socialLinks: [{ icon: 'github', link: '' }],
@@ -64,12 +64,12 @@ export default defineConfig({
         //   message: "Released ZhangLigang the MIT License.",
         //   //   copyright: "Copyright © 2022-11-11",
         // },
-        // algolia: {
-        //   appId: "RDX0Y4AQW1", // 需要替换
-        //   apiKey: "c7b6e28f95335eddc66c5a1b54ad9834", // 需要替换
-        //   indexName: "chaxus_ran", // 需要替换
-        //   placeholder: "search",
-        // },
+        algolia: {
+            appId: 'M7JGB28KE8', // 需要替换
+            apiKey: 'a24d9f06545724e2aea7feca3f3e0e53', // 需要替换
+            indexName: 'VitePress 搜索', // 需要替换
+            placeholder: '搜索',
+        },
         outline: {
             level: 'deep', // 右侧大纲标题层级
             label: '目录', // 右侧大纲标题文本配置
@@ -181,39 +181,6 @@ export default defineConfig({
                         //     link: '/src/other/type_and_interface',
                         // },
                         { text: '其它', link: '/src/other/qita' },
-                    ],
-                },
-            ],
-            '/src/ranui/': [
-                {
-                    text: 'Overview 总览',
-                    link: '/src/ranui/',
-                },
-                {
-                    text: '通用',
-                    items: [
-                        { text: 'Button 按钮', link: '/src/ranui/button/' },
-                        { text: 'Icon 图标', link: '/src/ranui/icon/' },
-                    ],
-                },
-                {
-                    text: '数据展示',
-                    items: [
-                        { text: 'Image 图片', link: '/src/ranui/image/' },
-                        { text: 'Tabs 标签页', link: '/src/ranui/tabs/' },
-                        { text: 'Preview 预览', link: '/src/ranui/preview/' },
-                    ],
-                },
-                {
-                    text: '数据录入',
-                    items: [{ text: 'Input 输入框', link: '/src/ranui/input/' }],
-                },
-                {
-                    text: '反馈',
-                    items: [
-                        { text: 'Message 全局提示', link: '/src/ranui/message/' },
-                        { text: 'Skeleton 骨架屏', link: '/src/ranui/skeleton/' },
-                        // { text: 'Modal 对话框', link: '/src/ranui/modal/' },
                     ],
                 },
             ],
