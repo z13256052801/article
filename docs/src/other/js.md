@@ -5,7 +5,7 @@
 ```js
 //截取字符串，并且返回一个新的字符串
 //strJoin：要截取的字符串
-var strSplit = strJoin.substring(0, strJoin.length - 1);
+var strSplit = strJoin.substring(0, strJoin.length - 1)
 ```
 
 ## 2.去除末尾最后一个逗号
@@ -13,8 +13,8 @@ var strSplit = strJoin.substring(0, strJoin.length - 1);
 ```js
 //截取字符串，并且返回一个新的字符串
 //strJoin：要截取的字符串
-var reg = /,$/gi;
-console.log(str.replace(reg, ""));
+var reg = /,$/gi
+console.log(str.replace(reg, ''))
 ```
 
 ## 3.桌面通知
@@ -22,8 +22,8 @@ console.log(str.replace(reg, ""));
 ```js
 //桌面通知，只有chrome，firefox浏览器支持桌面API
 Notification.requestPermission(function (status) {
-  var n = new Notification("通知消息", { body: "文字文字文字" });
-});
+    var n = new Notification('通知消息', { body: '文字文字文字' })
+})
 ```
 
 ## 4.冒泡排序
@@ -36,88 +36,88 @@ Notification.requestPermission(function (status) {
 		3、这时候最后一个元素是最大的，所以最后一个元素就不需要参与比较大小。
 */
 function bSort(arr) {
-  var len = arr.length;
-  for (var i = 0; i < len - 1; i++) {
-    for (var j = 0; j < len - 1 - i; j++) {
-      // 相邻元素两两对比，元素交换，大的元素交换到后面
-      if (arr[j] > arr[j + 1]) {
-        var temp = arr[j];
-        arr[j] = arr[j + 1];
-        arr[j + 1] = temp;
+    var len = arr.length
+    for (var i = 0; i < len - 1; i++) {
+        for (var j = 0; j < len - 1 - i; j++) {
+            // 相邻元素两两对比，元素交换，大的元素交换到后面
+            if (arr[j] > arr[j + 1]) {
+                var temp = arr[j]
+                arr[j] = arr[j + 1]
+                arr[j + 1] = temp
 
-        // 方法二 通过解构赋值交换变量的值
-        // [arr[j], arr[j+1]] = [arr[j+1], arr[j]];
-      }
+                // 方法二 通过解构赋值交换变量的值
+                // [arr[j], arr[j+1]] = [arr[j+1], arr[j]];
+            }
+        }
     }
-  }
-  return arr;
+    return arr
 }
 //使用函数
-bSort([20, 18, 27, 19, 35]);
+bSort([20, 18, 27, 19, 35])
 ```
 
 ## 5.根据数组中某一项进行排序
 
 ```js
 var arr = [
-  { name: "LL", age: 5 },
-  { name: "XX", age: 24 },
-  { name: "YY", age: 16 },
-  { name: "ZZ", age: 10 },
-  { name: "AA", age: 26 },
-];
+    { name: 'LL', age: 5 },
+    { name: 'XX', age: 24 },
+    { name: 'YY', age: 16 },
+    { name: 'ZZ', age: 10 },
+    { name: 'AA', age: 26 },
+]
 
 function compare(value) {
-  return function (a, b) {
-    var aaa = a[value];
-    var bbb = b[value];
-    return aaa - bbb;
-  };
+    return function (a, b) {
+        var aaa = a[value]
+        var bbb = b[value]
+        return aaa - bbb
+    }
 }
-console.log(arr.sort(compare("age")));
+console.log(arr.sort(compare('age')))
 ```
 
 ## 6.禁用 F12
 
 ```js
 document.onkeydown = function () {
-  if (window.event && window.event.keyCode == 123) {
-    event.keyCode = 0;
-    event.returnValue = false;
-    return false;
-  }
-};
+    if (window.event && window.event.keyCode == 123) {
+        event.keyCode = 0
+        event.returnValue = false
+        return false
+    }
+}
 ```
 
 ## 7.禁用鼠标右键
 
 ```js
-document.oncontextmenu = new Function("event.returnValue=false");
-document.onselectstart = new Function("event.returnValue=false");
+document.oncontextmenu = new Function('event.returnValue=false')
+document.onselectstart = new Function('event.returnValue=false')
 ```
 
 ## 8.if 判断逻辑优化
 
 ```js
 //Longhand
-if (x === "abc" || x === "def" || x === "ghi" || x === "jkl") {
-  //logic
+if (x === 'abc' || x === 'def' || x === 'ghi' || x === 'jkl') {
+    //logic
 }
 
 //Shorthand
-if (["abc", "def", "ghi", "jkl"].includes(x)) {
-  //logic
+if (['abc', 'def', 'ghi', 'jkl'].includes(x)) {
+    //logic
 }
 ```
 
 ```js
 //Longhand
 if (test1) {
-  callMethod();
+    callMethod()
 }
 
 //Shorthand
-test1 && callMethod(); //logic
+test1 && callMethod() //logic
 ```
 
 ## 9.switch 逻辑优化
@@ -154,45 +154,43 @@ data[something] && data[something]();
 ```js
 //longhand
 // joining arrays using concat
-const data = [1, 2, 3];
-const test = [4, 5, 6].concat(data);
+const data = [1, 2, 3]
+const test = [4, 5, 6].concat(data)
 
 //shorthand
 // joining arrays
-const data = [1, 2, 3];
-const test = [4, 5, 6, ...data];
-console.log(test); // [ 4, 5, 6, 1, 2, 3]
+const data = [1, 2, 3]
+const test = [4, 5, 6, ...data]
+console.log(test) // [ 4, 5, 6, 1, 2, 3]
 ```
 
 ## 11.根据数组对象属性查找特定对象
 
 ```js
 const data = [
-  {
-    type: "test1",
-    name: "abc",
-  },
-  {
-    type: "test2",
-    name: "cde",
-  },
-  {
-    type: "test1",
-    name: "fgh",
-  },
-];
-const filteredData = data.find(
-  (data) => data.type === "test1" && data.name === "fgh"
-);
-console.log(filteredData); // { type: 'test1', name: 'fgh' }
+    {
+        type: 'test1',
+        name: 'abc',
+    },
+    {
+        type: 'test2',
+        name: 'cde',
+    },
+    {
+        type: 'test1',
+        name: 'fgh',
+    },
+]
+const filteredData = data.find((data) => data.type === 'test1' && data.name === 'fgh')
+console.log(filteredData) // { type: 'test1', name: 'fgh' }
 ```
 
 ## 12.将对象转换为对象数组
 
 ```js
-const data = { test1: "abc", test2: "cde", test3: "efg" };
-const arr = Object.entries(data);
-console.log(arr);
+const data = { test1: 'abc', test2: 'cde', test3: 'efg' }
+const arr = Object.entries(data)
+console.log(arr)
 /** Output:
 [ 
     [ 'test1', 'abc' ],
@@ -213,21 +211,21 @@ Math.min(…arr); // 1
 ## 14.下载文件
 
 ```js
-downloadFile("url", "name");
+downloadFile('url', 'name')
 
 //下载文件
 function downloadFile(url, fileName) {
-  var x = new XMLHttpRequest();
-  x.open("GET", url, true);
-  x.responseType = "blob";
-  x.onload = function (e) {
-    var url = window.URL.createObjectURL(x.response);
-    var a = document.createElement("a");
-    a.href = url;
-    a.download = fileName;
-    a.click();
-  };
-  x.send();
+    var x = new XMLHttpRequest()
+    x.open('GET', url, true)
+    x.responseType = 'blob'
+    x.onload = function (e) {
+        var url = window.URL.createObjectURL(x.response)
+        var a = document.createElement('a')
+        a.href = url
+        a.download = fileName
+        a.click()
+    }
+    x.send()
 }
 ```
 
@@ -238,16 +236,16 @@ function downloadFile(url, fileName) {
 //data: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet格式的文件
 //fileName: 文件名
 function downloadXlsx(data, fileName) {
-  var blob = new Blob([data], {
-    type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=utf-8",
-  });
-  var link = document.createElement("a");
-  link.style.display = "none";
-  link.href = URL.createObjectURL(blob);
-  link.setAttribute("download", fileName + ".xlsx");
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
+    var blob = new Blob([data], {
+        type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=utf-8',
+    })
+    var link = document.createElement('a')
+    link.style.display = 'none'
+    link.href = URL.createObjectURL(blob)
+    link.setAttribute('download', fileName + '.xlsx')
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
 }
 ```
 
@@ -255,7 +253,7 @@ function downloadXlsx(data, fileName) {
 
 ```js
 function checkType(target) {
-  return Object.prototype.tostring.call(target);
+    return Object.prototype.tostring.call(target)
 }
 ```
 
@@ -263,7 +261,7 @@ function checkType(target) {
 
 ```js
 function unique(arr) {
-  return [...new Set(arr)];
+    return [...new Set(arr)]
 }
 ```
 
@@ -281,11 +279,11 @@ function uniq(str) {
 
 ```js
 function stopBubble(e) {
-  if (e && e.stopPropagation) {
-    e.stopPropagation();
-  } else {
-    window.event.cancelBubble = true;
-  }
+    if (e && e.stopPropagation) {
+        e.stopPropagation()
+    } else {
+        window.event.cancelBubble = true
+    }
 }
 ```
 
@@ -323,15 +321,15 @@ function setRandom(min，max){
 
 ```vue
 <template>
-  <div
-    class="item"
-    v-for="(item, index) in list.open_time"
-    :key="index"
-    @click="selectBox(item)"
-    :class="{ 'item-active': selectIndexArr.includes(item.id) }"
-  >
-    {{ item.times }}
-  </div>
+    <div
+        class="item"
+        v-for="(item, index) in list.open_time"
+        :key="index"
+        @click="selectBox(item)"
+        :class="{ 'item-active': selectIndexArr.includes(item.id) }"
+    >
+        {{ item.times }}
+    </div>
 </template>
 
 <script>
@@ -363,69 +361,79 @@ methods: {
 
 ```js
 function isConsecutive(arr) {
-  arr.sort((a, b) => a - b); //排序
-  for (let i = 1; i < arr.length; i++) {
-    if (arr[i] - arr[i - 1] !== 1) {
-      return false;
+    arr.sort((a, b) => a - b) //排序
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] - arr[i - 1] !== 1) {
+            return false
+        }
     }
-  }
-  return true;
+    return true
 }
 ```
 
 ## 23.计算两个日期之间的间隔
 
 ```js
-const diffInDays = (dateA, dateB) =>
-  Math.floor((dateB - dateA) / (1000 * 60 * 60 * 24));
+const diffInDays = (dateA, dateB) => Math.floor((dateB - dateA) / (1000 * 60 * 60 * 24))
 ```
 
 ## 24.查找日期位于一年中的第几天
 
 ```js
 const dayOfYear = (date) =>
-  Math.floor((date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
+    Math.floor((date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24)
 ```
 
 ## 25.检测对象是否为空
 
 ```js
-const isEmptyObject = (obj) =>
-  Object.keys(obj).length === 0 && obj.constructor === Object;
+const isEmptyObject = (obj) => Object.keys(obj).length === 0 && obj.constructor === Object
 ```
 
 ## 26.判断数组是否包含某个值
 
 ```js
-const hasValue = arr.includes(value);
+const hasValue = arr.includes(value)
 ```
 
 ## 27.检查数组中是否存在重复项
 
 ```js
-const hasDuplicates = (array) => new Set(array).size !== array.length;
+const hasDuplicates = (array) => new Set(array).size !== array.length
 ```
 
 ## 28.从数组中删除特定元素
 
 ```js
-const removedArray = array.filter((item) => item !== elementToRemove);
+const removedArray = array.filter((item) => item !== elementToRemove)
 ```
 
 ## 29.数组扁平化
 
 ```js
 const arr = [
-  [1, 2],
-  [3, 4],
-  [5, 6],
-];
-const flattenedArr = arr.reduce((acc, cur) => acc.concat(cur), []);
-console.log(flattenedArr); // [1, 2, 3, 4, 5, 6]
+    [1, 2],
+    [3, 4],
+    [5, 6],
+]
+const flattenedArr = arr.reduce((acc, cur) => acc.concat(cur), [])
+console.log(flattenedArr) // [1, 2, 3, 4, 5, 6]
 ```
 
 ## 30.对象数组根据某个属性值进行排序
 
 ```js
-const sortedArray = array.sort((a, b) => (a.property > b.property ? 1 : -1));
+const sortedArray = array.sort((a, b) => (a.property > b.property ? 1 : -1))
+```
+
+## 31.数组/字符串转换
+
+```js
+// 数组转字符串
+const arr = [1, 2, 3, 4, 5]
+arr.toString() //输出 '1,2,3,4,5'
+
+// 字符串转数组
+const str = '1,2,3,4,5'
+str.split(',').map(Number) //输出 [1, 2, 3, 4, 5]
 ```
