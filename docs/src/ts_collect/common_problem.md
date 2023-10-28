@@ -6,8 +6,8 @@
 <br/>
 错误代码：
 
-![image](../../../public/不存在属性1.png)
-![image](../../../public/不存在属性2.png)
+![image](../../public/不存在属性1.png)
+![image](../../public/不存在属性2.png)
 
 修改：
 
@@ -17,9 +17,9 @@ const templateLists = ref([] as any[])
 
 ## 2.xxx 可能为未定义
 
-![image](../../../public/可能为未定义1.png)
+![image](../../public/可能为未定义1.png)
 加个问号
-![image](../../../public/可能为未定义2.png)
+![image](../../public/可能为未定义2.png)
 
 ## 3.引用 window 自定义变量以及 ts 在 window 上自定义变量数据类型报错的解决方案
 
