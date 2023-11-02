@@ -180,6 +180,7 @@ export default defineConfig({
                         //     text: 'TS中type与interface的区别',
                         //     link: '/src/other/type_and_interface',
                         // },
+                        { text: '小程序/uniapp', link: '/src/other/applet' },
                         { text: '其它', link: '/src/other/qita' },
                     ],
                 },
